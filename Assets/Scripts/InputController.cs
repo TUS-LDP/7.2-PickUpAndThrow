@@ -21,6 +21,9 @@ public class InputController : MonoBehaviour
 
     public bool destroyCude;
 
+    public bool dropItem;
+    public bool rotateItem;
+    public bool throwItem;
     public void OnMove(InputAction.CallbackContext context)
     {
         MoveInput(context.ReadValue<Vector2>());
@@ -48,6 +51,22 @@ public class InputController : MonoBehaviour
     {
         Debug.Log("Destroy Cude");
         destroyCude = context.ReadValueAsButton();
+    }
+
+    public void OnDropItem(InputAction.CallbackContext context)
+    {
+        dropItem = context.ReadValueAsButton();
+    }
+
+    public void OnThrowItem(InputAction.CallbackContext context)
+    {
+        throwItem = context.ReadValueAsButton();
+    }
+
+    public void OnRotateItem(InputAction.CallbackContext context)
+    {
+        rotateItem = context.ReadValueAsButton();
+        //value.isPressed;
     }
 
     public void MoveInput(Vector2 newMoveDirection)

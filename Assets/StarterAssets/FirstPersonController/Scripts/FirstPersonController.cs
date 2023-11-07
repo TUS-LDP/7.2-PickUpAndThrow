@@ -117,7 +117,10 @@ namespace StarterAssets
 
 		private void LateUpdate()
 		{
-			CameraRotation();
+			if (_input.rotateItem == false)
+			{
+				CameraRotation();
+			}
 		}
 
 		private void GroundedCheck()
