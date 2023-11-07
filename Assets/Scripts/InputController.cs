@@ -21,6 +21,10 @@ public class InputController : MonoBehaviour
 
     public bool destroyCude;
 
+    public bool dropItem;
+    public bool rotateItem;
+    public bool throwItem;
+
     public void OnMove(InputAction.CallbackContext context)
     {
         MoveInput(context.ReadValue<Vector2>());
